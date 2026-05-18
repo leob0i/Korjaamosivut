@@ -29,14 +29,12 @@ export default function HeroSection() {
       subtitle: "Matkailuautojen huollot ja korjaukset",
       description:
         "Meillä hoituu myös matkailuautojen huollot ja korjaukset. Luotettava kumppani matkailuautosi kunnossapitoon Elimäellä.",
-      image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1513311068348-19c8fbdc0bb6?w=1600&h=900&fit=crop",
       cta: "Ota yhteyttä",
     },
   ]
 
-  const handleCTAClick = (cta: string) => {
-    window.location.href = "/contact"
-  }
+  const handleCTAClick = (_cta: string) => {}
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -64,7 +62,7 @@ export default function HeroSection() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="absolute inset-0 bg-black/80 z-10"></div>
+            <div className="absolute inset-0 bg-black/50 z-10"></div>
             <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
           </div>
         ))}
@@ -104,7 +102,7 @@ export default function HeroSection() {
                     size="lg"
                     variant="outline"
                     className="border-white/30 text-white hover:bg-white/10 hover:border-white font-medium px-10 py-6 text-sm tracking-wider uppercase"
-                    onClick={() => (window.location.href = "/contact")}
+                    onClick={() => {}}
                   >
                     Ota yhteyttä
                   </Button>

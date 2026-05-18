@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Wrench, Car, Shield, Gauge, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import Link from "@/components/demo-link"
 
 export default function FocusAreas() {
   const areas = [
@@ -36,7 +36,6 @@ export default function FocusAreas() {
     <section className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <span className="text-primary text-xs tracking-ultra-wide uppercase font-medium">Palvelumme</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6 uppercase tracking-tight">
             Mitä tarjoamme
           </h2>

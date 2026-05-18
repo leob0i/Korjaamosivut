@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "@/components/demo-link"
 import { Facebook, Instagram, Mail, Phone, MapPin, Clock } from "lucide-react"
 
 export default function Footer() {

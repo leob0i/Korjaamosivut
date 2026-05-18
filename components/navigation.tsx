@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import Link from "next/link"
+import Link from "@/components/demo-link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "lucide-react"
 
@@ -37,8 +37,8 @@ export default function Navigation() {
               <span className="text-primary font-display font-bold text-lg">AE</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg tracking-wider text-foreground uppercase">Autonomi</span>
-              <span className="text-[9px] tracking-ultra-wide text-muted-foreground uppercase">Elimäki · Monimerkkikorjaamo</span>
+               <span className="font-display font-bold text-lg tracking-wider text-foreground uppercase">ELIMÄKI</span>
+              <span className="text-[9px] tracking-ultra-wide text-muted-foreground uppercase">AUTONOMI · Monimerkkikorjaamo</span>
             </div>
           </Link>
 
@@ -99,7 +99,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Button
               className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-black px-8 py-5 text-xs tracking-widest uppercase transition-all duration-300"
-              onClick={() => (window.location.href = "/contact")}
+              onClick={() => {}}
             >
               Tarjouspyyntö
             </Button>
@@ -166,7 +166,7 @@ export default function Navigation() {
               <div className="px-4 pt-6">
                 <Button
                   className="w-full bg-primary hover:bg-primary-600 text-black font-semibold text-xs tracking-widest uppercase py-5"
-                  onClick={() => (window.location.href = "/contact")}
+                  onClick={() => {}}
                 >
                   Tarjouspyyntö
                 </Button>
