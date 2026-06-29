@@ -1,8 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Wrench, Car, Shield, Gauge, ArrowRight } from "lucide-react"
+import { Wrench, Car, Shield, Gauge, ArrowRight, ArrowUpRight } from "lucide-react"
 import Link from "@/components/demo-link"
+import NextLink from "next/link"
 
 export default function FocusAreas() {
   const areas = [
@@ -11,24 +13,32 @@ export default function FocusAreas() {
       title: "Määräaikaishuollot",
       description: "Ammattitaitoiset huollot kaikille automerkeille ilman merkkirajoituksia.",
       stats: "Kaikki merkit",
+      bg: "/vtec.automoottori.avif",
+      href: "/maaraaikaishuollot",
     },
     {
       icon: Shield,
       title: "Jarrupalvelut",
       description: "Brembo Expert -sertifioitu jarruasiantuntija. Turvalliset jarrut joka tilanteessa.",
       stats: "Brembo Expert",
+      bg: "/brembo.jarrut.jpg",
+      href: "/jarrupalvelut",
     },
     {
       icon: Car,
       title: "Matkailuautot",
       description: "Meillä hoituu myös matkailuautojen huollot ja korjaukset ammattitaidolla.",
       stats: "Erikoisosaaminen",
+      bg: "/maitkailuauto.avif",
+      href: "/matkailuautot",
     },
     {
       icon: Gauge,
       title: "Diagnostiikka & Korjaukset",
       description: "Modernit diagnostiikkalaitteet ja kattavat korjauspalvelut kaikille merkeille.",
       stats: "Nykyaikainen",
+      bg: "/oljytikku.jpg",
+      href: "/diagnostiikka",
     },
   ]
 
@@ -50,16 +60,32 @@ export default function FocusAreas() {
           {areas.map((area, index) => (
             <div
               key={index}
-              className="group relative p-8 border border-border hover:border-primary/50 bg-background transition-all duration-500 overflow-hidden"
+              className="group relative p-8 border border-border hover:border-primary/50 transition-all duration-500 overflow-hidden min-h-[220px]"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500"></div>
-              <div className="relative z-10">
+              <Image
+                src={area.bg}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-black/50" />
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="flex items-start justify-between mb-6">
                   <area.icon className="w-10 h-10 text-primary" strokeWidth={1.5} />
                   <span className="text-xs tracking-wider uppercase text-primary border border-primary/30 px-3 py-1">{area.stats}</span>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3 uppercase tracking-wide">{area.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{area.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">{area.description}</p>
+                <div className="mt-auto flex justify-end">
+                  <NextLink
+                    href={area.href}
+                    className="inline-flex items-center gap-1.5 text-xs tracking-widest uppercase text-primary hover:text-foreground transition-colors duration-200"
+                  >
+                    Lue lisää
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </NextLink>
+                </div>
               </div>
             </div>
           ))}

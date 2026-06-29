@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Wrench, Shield, Clock, Award, CircleDot } from "lucide-react"
 import FocusAreas from "@/components/focus-areas"
 
@@ -74,10 +75,13 @@ export default function AboutSection() {
             </ul>
           </div>
           <div className="relative">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop"
               alt="Autonomi Elimäki korjaamo"
+              width={600}
+              height={500}
               className="w-full h-[500px] object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
             <div className="absolute bottom-6 left-6 flex items-center gap-3">

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="100" y1="0" x2="100" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="300" y1="0" x2="300" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="500" y1="0" x2="500" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <line x1="700" y1="0" x2="700" y2="500" stroke="#e8c547" stroke-width="1" opacity="0.20"/>
+  <!-- Large wrench -->
+  <g transform="translate(500,265) rotate(-35)" opacity="0.60">
+    <rect x="-20" y="-155" width="40" height="240" rx="10" fill="#e8c547"/>
+    <ellipse cx="0" cy="-155" rx="58" ry="44" fill="#e8c547"/>
+    <ellipse cx="0" cy="-155" rx="30" ry="22" fill="#111"/>
+    <rect x="-11" y="-199" width="22" height="46" fill="#111"/>
+    <ellipse cx="0" cy="85" rx="46" ry="34" fill="#e8c547"/>
+    <ellipse cx="0" cy="85" rx="24" ry="18" fill="#111"/>
+  </g>
+  <!-- Big gear top-right -->
+  <g transform="translate(685,92)" opacity="0.55">
+    <circle cx="0" cy="0" r="75" fill="#e8c547"/>
+    <circle cx="0" cy="0" r="50" fill="#111"/>
+    <circle cx="0" cy="0" r="18" fill="#e8c547"/>
+    <rect x="-10" y="-85" width="20" height="22" rx="4" fill="#e8c547"/>
+    <rect x="-10" y="63" width="20" height="22" rx="4" fill="#e8c547"/>
+    <rect x="-85" y="-10" width="22" height="20" rx="4" fill="#e8c547"/>
+    <rect x="63" y="-10" width="22" height="20" rx="4" fill="#e8c547"/>
+    <rect x="-64" y="-64" width="20" height="20" rx="4" transform="rotate(45)" fill="#e8c547"/>
+    <rect x="44" y="-64" width="20" height="20" rx="4" transform="rotate(-45)" fill="#e8c547"/>
+    <rect x="-64" y="44" width="20" height="20" rx="4" transform="rotate(-45)" fill="#e8c547"/>
+    <rect x="44" y="44" width="20" height="20" rx="4" transform="rotate(45)" fill="#e8c547"/>
+  </g>
+  <!-- Small gear bottom-left -->
+  <g transform="translate(80,422)" opacity="0.48">
+    <circle cx="0" cy="0" r="52" fill="#e8c547"/>
+    <circle cx="0" cy="0" r="34" fill="#111"/>
+    <circle cx="0" cy="0" r="12" fill="#e8c547"/>
+    <rect x="-7" y="-60" width="14" height="16" rx="3" fill="#e8c547"/>
+    <rect x="-7" y="44" width="14" height="16" rx="3" fill="#e8c547"/>
+    <rect x="-60" y="-7" width="16" height="14" rx="3" fill="#e8c547"/>
+    <rect x="44" y="-7" width="16" height="14" rx="3" fill="#e8c547"/>
+  </g>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="5" height="500" fill="#e8c547" opacity="0.75"/>
+</svg>

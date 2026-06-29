@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 
@@ -21,7 +22,7 @@ export default function HeroSection() {
       subtitle: "Sertifioitu jarruasiantuntija",
       description:
         "Olemme Brembo Expert -sertifioitu jarruasiantuntija. Jarruhuollot ammattitaidolla — turvallisuutesi on meille tärkeintä.",
-      image: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800&h=600&fit=crop",
+      image: "/brembo.jarrut.jpg",
       cta: "Lue lisää",
     },
     {
@@ -52,7 +53,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[80vh] sm:h-screen overflow-hidden">
       {/* Background Slides */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -63,13 +64,20 @@ export default function HeroSection() {
             }`}
           >
             <div className="absolute inset-0 bg-black/50 z-10"></div>
-            <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              priority={index === 0}
+              className="object-cover object-top sm:object-center"
+              sizes="100vw"
+            />
           </div>
         ))}
       </div>
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center">
+      <div className="relative z-20 h-full flex items-end sm:items-center pb-20 sm:pb-0">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             {slides.map((slide, index) => (

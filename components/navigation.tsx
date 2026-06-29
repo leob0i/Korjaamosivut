@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react"
 import Link from "@/components/demo-link"
+import NextLink from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "lucide-react"
 
@@ -20,11 +21,11 @@ export default function Navigation() {
   }
 
   const palvelutItems = [
-    { name: "Huollot", href: "/huollot" },
-    { name: "Jarrupalvelut (Brembo Expert)", href: "/korjaukset" },
-    { name: "Matkailuautojen huollot", href: "/palvelut" },
+    { name: "Määräaikaishuollot", href: "/maaraaikaishuollot" },
+    { name: "Jarrupalvelut", href: "/jarrupalvelut" },
+    { name: "Matkailuautot", href: "/matkailuautot" },
+    { name: "Diagnostiikka & Korjaukset", href: "/diagnostiikka" },
     { name: "Rengastyöt", href: "/rengastyot" },
-    { name: "Korjaukset ja vianhaku", href: "/korjaukset" },
   ]
 
   return (
@@ -32,7 +33,7 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <NextLink href="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 border border-primary flex items-center justify-center">
               <span className="text-primary font-display font-bold text-lg">AE</span>
             </div>
@@ -40,16 +41,16 @@ export default function Navigation() {
                <span className="font-display font-bold text-lg tracking-wider text-foreground uppercase">ELIMÄKI</span>
               <span className="text-[9px] tracking-ultra-wide text-muted-foreground uppercase">AUTONOMI · Monimerkkikorjaamo</span>
             </div>
-          </Link>
+          </NextLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
-            <Link
+            <NextLink
               href="/"
               className="text-sm tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               Etusivu
-            </Link>
+            </NextLink>
 
             {/* Palvelut Dropdown */}
             <div
@@ -69,13 +70,13 @@ export default function Navigation() {
                   onMouseLeave={handlePalvelutLeave}
                 >
                   {palvelutItems.map((item) => (
-                    <Link
+                    <NextLink
                       key={item.name}
                       href={item.href}
                       className="block px-5 py-2.5 text-sm tracking-wide text-muted-foreground hover:text-primary hover:bg-background transition-colors duration-200"
                     >
                       {item.name}
-                    </Link>
+                    </NextLink>
                   ))}
                 </div>
               )}
@@ -115,13 +116,13 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden py-6 border-t border-border/50">
             <div className="space-y-1">
-              <Link
+              <NextLink
                 href="/"
                 className="block px-4 py-3 text-sm tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 Etusivu
-              </Link>
+              </NextLink>
 
               {/* Mobile Palvelut Accordion */}
               <div>
@@ -135,14 +136,14 @@ export default function Navigation() {
                 {palvelutOpen && (
                   <div className="pl-4 space-y-1 border-l border-primary/30 ml-4">
                     {palvelutItems.map((item) => (
-                      <Link
+                      <NextLink
                         key={item.name}
                         href={item.href}
                         className="block px-4 py-2.5 text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
-                      </Link>
+                      </NextLink>
                     ))}
                   </div>
                 )}
